@@ -30,10 +30,10 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
                 <DropdownMenuContent align="end">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Settings</DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer">Profile</DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer">Settings</DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem>Logout</DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer">Logout</DropdownMenuItem>
                 </DropdownMenuContent>
                 </DropdownMenu>
             </div>
