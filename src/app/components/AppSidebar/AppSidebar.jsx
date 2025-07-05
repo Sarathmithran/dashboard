@@ -1,5 +1,4 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-
 import {
   Sidebar,
   SidebarContent,
@@ -10,6 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Image from "next/image"
 
 // Menu items
 const items = [
@@ -45,7 +45,10 @@ const AppSidebar = () => {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-2xl mt-1">Cred Garage</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-2xl mt-2 flex items-center">
+            <Image src="/assets/img/cred-logo.png" className="mr-3" alt="logo" width={25} height={30}/>
+            Cred Garage
+          </SidebarGroupLabel>
           <SidebarGroupContent className="mt-5">
             <SidebarMenu>
               {items.map((item) => (

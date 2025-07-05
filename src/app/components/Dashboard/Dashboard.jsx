@@ -3,13 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ProfileSummary from '../ProfileSummary/ProfileSummary';
 import BenefitsSection from '../BenefitsSection/BenefitsSection';
-import RewardPointsProgress from '../RewardPointsProgress/RewardPointsProgress';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
-import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 const Dashboard = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   // Load theme from localStorage
   useEffect(() => {
@@ -17,12 +14,6 @@ const Dashboard = () => {
     const isDark = storedTheme === 'dark';
     setDarkMode(isDark);
     document.documentElement.classList.toggle('dark', isDark);
-  }, []);
-
-  // Simulate loading
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3000);
-    return () => clearTimeout(timer);
   }, []);
 
   const toggleDarkMode = () => {
@@ -58,6 +49,7 @@ const Dashboard = () => {
         </motion.div>
 
         <ProfileSummary darkMode={darkMode} />
+        <BenefitsSection darkMode={darkMode} />
       </div>
     </motion.div>
   );
