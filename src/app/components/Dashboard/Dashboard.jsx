@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ProfileSummary from '../ProfileSummary/ProfileSummary';
 import BenefitsSection from '../BenefitsSection/BenefitsSection';
+import RewardPointsProgress from '../RewardPointsProgress/RewardPointsProgress';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 const Dashboard = () => {
@@ -50,6 +51,7 @@ const Dashboard = () => {
 
         <ProfileSummary darkMode={darkMode} />
         <BenefitsSection darkMode={darkMode} />
+        <RewardPointsProgress darkMode={darkMode} />
       </div>
     </motion.div>
   );

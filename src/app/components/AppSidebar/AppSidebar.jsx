@@ -43,10 +43,11 @@ const items = [
 const AppSidebar = () => {
   return (
     <Sidebar>
-      <SidebarContent>
+      <SidebarContent className="dark:bg-gray-900 border-r-2">
         <SidebarGroup>
           <SidebarGroupLabel className="text-2xl mt-2 flex items-center">
-            <Image src="/assets/img/cred-logo.png" className="mr-3" alt="logo" width={25} height={30}/>
+            <Image src="/assets/img/cred-logo.png" className="mr-3 hidden dark:block" alt="logo" width={25} height={30}/>
+            <Image src="/assets/img/cred-logo-black.png" className="mr-3 block dark:hidden" alt="logo" width={25} height={30}/>
             Cred Garage
           </SidebarGroupLabel>
           <SidebarGroupContent className="mt-5">
