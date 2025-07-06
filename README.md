@@ -36,3 +36,10 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+## 🚀 Live Demo
+
+This project is deployed using [Vercel](https://vercel.com).  
+👉 **Live Site:** [cred-dashboard-nine.vercel.app](https://cred-dashboard-nine.vercel.app)
