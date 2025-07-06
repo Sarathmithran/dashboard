@@ -5,9 +5,11 @@ import ProfileSummary from '../ProfileSummary/ProfileSummary';
 import BenefitsSection from '../BenefitsSection/BenefitsSection';
 import RewardPointsProgress from '../RewardPointsProgress/RewardPointsProgress';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 const Dashboard = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Load theme from localStorage
   useEffect(() => {
@@ -17,12 +19,20 @@ const Dashboard = () => {
     document.documentElement.classList.toggle('dark', isDark);
   }, []);
 
+  // Simulate loading
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const toggleDarkMode = () => {
     const newTheme = !darkMode;
     setDarkMode(newTheme);
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
     document.documentElement.classList.toggle('dark', newTheme);
   };
+
+  if (isLoading) return <LoadingScreen darkMode={darkMode} />;
 
   return (
     <motion.div 

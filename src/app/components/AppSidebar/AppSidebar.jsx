@@ -43,7 +43,7 @@ const items = [
 const AppSidebar = () => {
   return (
     <Sidebar>
-      <SidebarContent className="dark:bg-gray-900 border-r-2">
+      <SidebarContent className="dark:bg-gray-800 border-r-2">
         <SidebarGroup>
           <SidebarGroupLabel className="text-2xl mt-2 flex items-center">
             <Image src="/assets/img/cred-logo.png" className="mr-3 hidden dark:block" alt="logo" width={25} height={30}/>
