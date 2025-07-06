@@ -56,13 +56,15 @@ const ProfileSkeleton = ({ darkMode }) => {
                 ))}
               </div>
             </div>
-            <Skeleton 
-              height={96} 
-              width={96} 
-              circle 
-              baseColor={darkMode ? '#374151' : '#E5E7EB'}
-              highlightColor={darkMode ? '#4B5563' : '#F3F4F6'}
-            />
+            <div className="hidden sm:block">
+              <Skeleton 
+                height={96} 
+                width={96} 
+                circle 
+                baseColor={darkMode ? '#374151' : '#E5E7EB'}
+                highlightColor={darkMode ? '#4B5563' : '#F3F4F6'}
+              />
+            </div>
           </div>
           
           <div className="mb-4">
