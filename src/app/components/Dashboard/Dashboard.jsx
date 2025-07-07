@@ -8,16 +8,7 @@ import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 const Dashboard = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
-  // Load theme from localStorage
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const isDark = storedTheme === 'dark';
-    setDarkMode(isDark);
-    document.documentElement.classList.toggle('dark', isDark);
-  }, []);
 
   // Simulate loading
   useEffect(() => {
@@ -25,14 +16,7 @@ const Dashboard = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleDarkMode = () => {
-    const newTheme = !darkMode;
-    setDarkMode(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', newTheme);
-  };
-
-  if (isLoading) return <LoadingScreen darkMode={darkMode} />;
+  if (isLoading) return <LoadingScreen />;
 
   return (
     <motion.div 
@@ -56,12 +40,12 @@ const Dashboard = () => {
               Your dashboard
             </p>
           </div>
-          <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <DarkModeToggle />
         </motion.div>
 
-        <ProfileSummary darkMode={darkMode} />
-        <BenefitsSection darkMode={darkMode} />
-        <RewardPointsProgress darkMode={darkMode} />
+        <ProfileSummary />
+        <BenefitsSection />
+        <RewardPointsProgress />
       </div>
     </motion.div>
   );

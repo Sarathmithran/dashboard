@@ -2,8 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Skeleton from 'react-loading-skeleton';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
-const BenefitsSkeleton = ({ darkMode }) => {
+const BenefitsSkeleton = () => {
+
+  const { darkMode } = useTheme();
+  
   return (
     <>
         <motion.div 

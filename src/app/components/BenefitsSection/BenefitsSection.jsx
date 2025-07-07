@@ -9,8 +9,12 @@ import {
   Sparkles,
   Plane
 } from 'lucide-react';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
-const BenefitsSection = ({ darkMode }) => {
+const BenefitsSection = () => {
+
+  const { darkMode } = useTheme();
+
   const benefits = [
     {
       id: 1,

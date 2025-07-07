@@ -3,6 +3,7 @@ import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import Header from "./components/Header/Header";
 import AppSidebar from "./components/AppSidebar/AppSidebar";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,13 +24,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <SidebarProvider>
-          <AppSidebar />
-          <main className="w-screen">
-            <Header />
-            {children}
-          </main>
-        </SidebarProvider>
+        <ThemeProvider>
+          <SidebarProvider>
+            <AppSidebar />
+            <main className="w-screen">
+              <Header />
+              {children}
+            </main>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

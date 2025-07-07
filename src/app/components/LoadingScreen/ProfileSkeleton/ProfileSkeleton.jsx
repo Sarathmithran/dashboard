@@ -2,8 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Skeleton from 'react-loading-skeleton';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
-const ProfileSkeleton = ({ darkMode }) => {
+const ProfileSkeleton = () => {
+
+  const { darkMode } = useTheme();
+
   return (
     <>
         <motion.div 

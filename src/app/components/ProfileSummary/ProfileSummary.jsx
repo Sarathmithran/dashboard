@@ -4,8 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { Star, Zap, Crown } from 'lucide-react';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
-const ProfileSummary = ({ darkMode }) => {
+const ProfileSummary = () => {
+
+  const { darkMode } = useTheme();
   const [currentXP, setCurrentXP] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 

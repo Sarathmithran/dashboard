@@ -1,6 +1,6 @@
 # 🛠️ Cred Dashboard
 
-Cred Dashboard is a fully responsive, dark-mode-enabled admin panel built with **Next.js**, T**ailwind CSS**, **shadcn/ui**, and **Framer Motion** – featuring animated skeletons, circular progress charts, and clean modern UI components.
+Cred Dashboard is a fully responsive, dark-mode-enabled admin panel built with **Next.js**, **Tailwind CSS**, **shadcn/ui**, and **Framer Motion** – featuring animated skeletons, circular progress charts, and clean modern UI components.
 
 ---
 

@@ -2,8 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Moon, Sun } from 'lucide-react';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
-const DarkModeToggle = ({ darkMode, toggleDarkMode }) => {
+const DarkModeToggle = () => {
+
+  const { darkMode, toggleDarkMode } = useTheme();
+
   return (
     <motion.button
       onClick={toggleDarkMode}

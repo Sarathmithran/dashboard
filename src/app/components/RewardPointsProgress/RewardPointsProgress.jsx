@@ -11,8 +11,11 @@ import {
   Star,
   Zap
 } from 'lucide-react';
+import { useTheme } from '@/app/contexts/ThemeContext';
 
-const RewardPointsProgress = ({ darkMode }) => {
+const RewardPointsProgress = () => {
+
+  const { darkMode } = useTheme();
   const [rewardPoints, setRewardPoints] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [showCelebration, setShowCelebration] = useState(false);
