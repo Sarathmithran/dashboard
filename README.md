@@ -11,6 +11,7 @@ Cred Dashboard is a fully responsive, dark-mode-enabled admin panel built with *
 - 🧠 **Framer Motion**
 - 💅 **shadcn/ui**
 - 🖼️ **react-loading-skeleton**
+- 🌗 **Context API** – State management (e.g., dark mode)
 - 🔵 **react-circular-progressbar – Circular charts**
 - 🧩 **lucide-react – Icon library**
 - 🌙 **Dark Mode Support**
