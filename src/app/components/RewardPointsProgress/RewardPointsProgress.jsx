@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { 
   Trophy, 
-  Target, 
   Sparkles, 
   TrendingUp, 
   Gift,

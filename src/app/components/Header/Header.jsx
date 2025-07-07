@@ -27,13 +27,13 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
                     <AvatarFallback>ST</AvatarFallback>
                     </Avatar>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="end" className="dark:bg-gray-800">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem className="cursor-pointer">Profile</DropdownMenuItem>
-                    <DropdownMenuItem className="cursor-pointer">Settings</DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer hover:dark:bg-gray-900">Profile</DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer hover:dark:bg-gray-900">Settings</DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem className="cursor-pointer">Logout</DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer hover:dark:bg-gray-900">Logout</DropdownMenuItem>
                 </DropdownMenuContent>
                 </DropdownMenu>
             </div>
