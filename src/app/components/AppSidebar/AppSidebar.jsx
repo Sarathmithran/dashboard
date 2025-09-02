@@ -70,9 +70,7 @@ const AppSidebar = () => {
         {/* Header */}
         <SidebarGroup>
           <SidebarGroupLabel className="text-2xl mt-2 flex items-center">
-            <Image src="/assets/img/cred-logo.png" className="mr-3 hidden dark:block" alt="logo" width={25} height={30}/>
-            <Image src="/assets/img/cred-logo-black.png" className="mr-3 block dark:hidden" alt="logo" width={25} height={30}/>
-            Cred Garage
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Dashboard</span>
           </SidebarGroupLabel>
         </SidebarGroup>
 

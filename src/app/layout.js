@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Cred Dashboard",
-  description: "Cred garage inspired dashboard",
+  title: "Dashboard",
+  description: "dashboard",
 };
 
 export default function RootLayout({ children }) {
